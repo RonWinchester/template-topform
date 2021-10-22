@@ -1,0 +1,322 @@
+.container {
+    max-width: 1472px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .header_top_mobile {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+header .geo-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 120px;
+}
+
+header .geo-icon {
+    margin-right: 7px;
+}
+
+.js-geo-open {
+    cursor: pointer;
+}
+
+header .geo-block__text {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #0044A4;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+header .top_menu {
+    margin-right: auto;
+}
+
+header .top_menu ul {
+    display: flex;
+}
+
+header .top_menu li {
+    margin-right: 36px;
+}
+
+header .top_menu a {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #333333;
+    white-space: nowrap;
+}
+
+header .phone_numbers {
+    margin-right: 70px;
+}
+
+header .h_call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    height: 31px;
+    border: 1px solid #F3AB03;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #F3AB03;
+}
+
+header .phone_numbers a {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.0275em;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+button, .btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-radius: 0;
+    transition: all 0.5s ease 0s;
+    font-family: "Inter", sans-serif;
+}
+
+header .header_basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 70px;
+    padding: 5px 5px 0 0;
+}
+
+header .basket_announce {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -16px;
+    padding-top: 26px;
+    z-index: 10;
+}
+
+header .header_basket .basket_count {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    background: #F3AB03;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .basket_announce_container {
+    width: 592px;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    box-shadow: 0px 0px 16px rgb(0 68 164 / 20%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+header .basket_announce_list {
+    margin-bottom: 12px;
+}
+
+header .basket_announce .btn_basket {
+    height: 39px;
+    padding: 0 36px;
+    background: linear-gradient( 
+180deg, #0044A4 0%, #00347E 100%);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    border: 1px solid #0044A4;
+    white-space: nowrap;
+    margin-left: auto;
+}
+.btn_default {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .basket_announce_list {
+    margin-bottom: 12px;
+}
+header .basket_announce_item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+header .basket_announce_item .image {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    margin-right: 24px;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 4px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .basket_announce_item .info {
+    width: 100%;
+    display: flex;
+    margin-bottom: 36px;
+}
+
+header .basket_announce_item .title {
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #19191D;
+}
+
+header .basket_announce_item .count {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    letter-spacing: 0.0275em;
+    color: #333333;
+}
+
+header .basket_announce_item .price_block {
+    display: flex;
+    align-items: center;
+}
+
+header .basket_announce_item .price {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+header .basket_announce_item .all_price {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    color: #333333;
+}
+
+header .basket_announce_item .old_price {
+    font-size: 12px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    text-decoration-line: line-through;
+    color: #AFAFAF;
+    margin-left: 16px;
+}
+
+header .header_bottom {
+    padding: 15px 0;
+    background: #F7F7F7;
+}
+
+header .header_bottom .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 107px;
+}
+
+header .bottom_menu {
+    margin-right: 20px;
+}
+
+header .catalog-menu {
+    display: flex;
+}
+
+header .catalog-menu__item {
+    margin-right: 60px;
+    position: relative;
+}
+
+header .header_bottom .mobile_info_menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+header .h_call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    height: 31px;
+    border: 1px solid #F3AB03;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #F3AB03;
+}
+
+header .catalog-menu__item > a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #0044A4;
+}
