@@ -1,5 +1,6 @@
 import React from "react";
-import logo from '../../img/logo_615711.svg'
+import logo from "../../img/logo_615711.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -8,9 +9,9 @@ function Header() {
         <div className="container">
           <div className="header_top_mobile">
             <button type="button" className="burger js-open-burger"></button>
-            <a className="logo" href="/">
-              <img src={logo}  alt=''/>
-            </a>
+            <Link className="logo" to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
           <div className="geo-block js-geo">
             <div className="geo-icon js-geo-open">
@@ -146,20 +147,6 @@ function Header() {
                     <div className="image">
                       <img src="../img/content/product.webp" alt="" />
                     </div>
-                    <div className="main">
-                      <div className="info">
-                        <div className="title">
-                          Робот-пылесос Tefal X-plorer RG6875WH, черный
-                        </div>
-                        <div className="count">1 шт</div>
-                      </div>
-                      <div className="price_block">
-                        <div className="price">
-                          11 260 ₽ <span className="old_price">13 000 ₽</span>
-                        </div>
-                        <div className="all_price">11 260 ₽ </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 <a
@@ -175,36 +162,35 @@ function Header() {
       </div>
       <div className="header_bottom js-header-bottom">
         <div className="container">
-          <a className="logo" href="/">
-            <img src={logo}  alt='logo'/>
-          </a>
+          <Link className="logo" to="/">
+            <img src={logo} alt="" />
+          </Link>
           <div className="bottom_menu">
             <ul className="catalog-menu">
               <li className="catalog-menu__item active_menu">
-                <a className="js-menu-open" href="/katalog/tech">
+                <Link className="js-menu-open" to="/katalog/tech">
                   Техника
-                </a>
-
+                </Link>
               </li>
               <li className="catalog-menu__item ">
-                <a className="js-menu-open" href="/katalog/clothes">
+                <Link className="js-menu-open" to="/katalog/clothes">
                   Одежда
-                </a>
+                </Link>
               </li>
               <li className="catalog-menu__item ">
-                <a className="js-menu-open" href="/katalog/forkids">
+                <Link className="js-menu-open" to="/katalog/forkids">
                   Для детей
-                </a>
+                </Link>
               </li>
               <li className="catalog-menu__item ">
-                <a className="js-menu-open" href="/katalog/cosmo">
+                <Link className="js-menu-open" to="/katalog/cosmo">
                   Косметика
-                </a>
+                </Link>
               </li>
               <li className="catalog-menu__item ">
-                <a className="js-menu-open" href="/katalog/forpets">
+                <Link className="js-menu-open" to="/katalog/forpets">
                   Для животных
-                </a>
+                </Link>
               </li>
               <li className="catalog-menu__item ">
                 <a className="js-menu-open" href="/katalog/goods">

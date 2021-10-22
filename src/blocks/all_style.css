@@ -1405,7 +1405,6 @@ footer .policy:hover {
 .catalog_list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -16px 20px;
 }
 .catalog_item {
     width: calc(100%/4);
