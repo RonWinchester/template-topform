@@ -9,7 +9,7 @@ function Header() {
         <div className="container">
           <div className="header_top_mobile">
             <button type="button" className="burger js-open-burger"></button>
-            <Link className="logo" to="/">
+            <Link className="logo" to="/main">
               <img src={logo} alt="" />
             </Link>
           </div>
@@ -162,7 +162,7 @@ function Header() {
       </div>
       <div className="header_bottom js-header-bottom">
         <div className="container">
-          <Link className="logo" to="/">
+          <Link className="logo" to="/main">
             <img src={logo} alt="" />
           </Link>
           <div className="bottom_menu">

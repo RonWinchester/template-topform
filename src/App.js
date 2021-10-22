@@ -11,9 +11,18 @@ import Header from "./components/Header/Header";
 import Catalog from "./components/Catalog/Catalog";
 import { getMovies } from "./utils/Api";
 import Footer from "./components/Footer/Footer";
-import Card from "./components/Cards/Cards";
+import Element from "./components/Card/Card";
 
 function App() {
+
+  const [tech, setTech] = React.useState([]);
+  const [tech1, setTech1] = React.useState([]);
+  const [tech2, setTech2] = React.useState([]);
+  const [tech3, setTech3] = React.useState([]);
+  const [tech4, setTech4] = React.useState([]);
+
+  const [items, setItems] = React.useState([]);
+
   const handleRequest = () => {
     getMovies()
       .then((response) => {
@@ -31,43 +40,43 @@ function App() {
       });
   };
 
-  const [tech, setTech] = React.useState([]);
-  const [tech1, setTech1] = React.useState([]);
-  const [tech2, setTech2] = React.useState([]);
-  const [tech3, setTech3] = React.useState([]);
-  const [tech4, setTech4] = React.useState([]);
-
   React.useEffect(() => {
     handleRequest();
   }, []);
 
-  const [items, setItems] = React.useState([]);
+  const [good, setGood] = React.useState({});
+  const [loc, setLoc] = React.useState('')
+  function goodsPage(item, loc) {
+    setGood(item);
+    setLoc(loc);
+  }
+
   return (
     <>
       <Switch>
         <>
           <Header></Header>
-          <Route exact path="/">
-            <Catalog items={items} />
+          <Route exact path="/main">
+            <Catalog items={items} goodsPage={goodsPage} />
           </Route>
-          <Route path="/katalog/tech">
-            <Catalog items={tech} />
+          <Route exact path="/katalog/tech">
+            <Catalog items={tech} goodsPage={goodsPage} />
           </Route>
-          <Route path="/katalog/clothes">
-            <Catalog items={tech1} />
+          <Route exact path="/katalog/clothes">
+            <Catalog items={tech1} goodsPage={goodsPage} />
           </Route>
-          <Route path="/katalog/forkids">
-            <Catalog items={tech2} />
+          <Route exact path="/katalog/forkids">
+            <Catalog items={tech2} goodsPage={goodsPage} />
           </Route>
-          <Route path="/katalog/cosmo">
-            <Catalog items={tech3} />
+          <Route exact path="/katalog/cosmo">
+            <Catalog items={tech3} goodsPage={goodsPage} />
           </Route>
-          <Route path="/katalog/forpets">
-            <Catalog items={tech4} />
+          <Route exact path="/katalog/forpets">
+            <Catalog items={tech4} goodsPage={goodsPage} />
           </Route>
-{/*           <Route parh='/goods'>
-            <Card></Card>
-          </Route> */}
+          <Route exact path={`${loc}/${good.id}`}>
+            <Element item={good}></Element>
+          </Route>
           <Footer></Footer>
         </>
       </Switch>

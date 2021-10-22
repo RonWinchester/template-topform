@@ -2,10 +2,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-function Card({ item }) {
+function Card({ item, goodsPage }) {
   const [numGoods, setNumGoods] = React.useState(1);
   const location = useLocation();
-  console.log(location)
 
   function handleNumPlus() {
     setNumGoods(numGoods + 1);
@@ -13,6 +12,12 @@ function Card({ item }) {
 
   function handleNumMinus() {
     setNumGoods(numGoods - 1);
+  }
+  let loc = null
+  function setItems() {
+    loc = location.pathname
+    
+    goodsPage(item, loc)
   }
 
   return (
@@ -25,6 +30,7 @@ function Card({ item }) {
           <img
             src={`https://api.nomoreparties.co${item.image.url}`}
             alt={item.nameRU}
+            onClick={setItems}
           />
           <div className="label_list">
             <div className="label sale_label">-8%</div>
@@ -32,7 +38,7 @@ function Card({ item }) {
         </Link>
         <div className="info js-variant-info" data-variant="5">
           <div className="stars"></div>
-          <Link to={`${location.pathname}/${item.id}`} className="title">
+          <Link to={`${location.pathname}/${item.id}`} className="title" onClick={setItems}>
             {item.nameRU}
           </Link>
           <div className="price">
